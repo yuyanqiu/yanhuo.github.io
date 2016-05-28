@@ -1,2 +1,2 @@
 # yanhuo.github.io
-烟火的博客
+烟火的笔记
