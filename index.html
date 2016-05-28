@@ -34,7 +34,28 @@ input,button,select,img{ box-sizing:border-box; line-height:normal;}
 a{box-sizing:border-box;  color:#4c4d4d;text-decoration:none; outline: none;}
 a:hover{box-sizing:border-box;  color:#e76f12; text-decoration:none; }
 a:active{ box-sizing:border-box; outline: none; star:expression(this.onFocus=this.blur());}
+</code></pre>
 
+<h1>
+<a id="移动端屏幕适配相关代码" class="anchor" href="#%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B1%8F%E5%B9%95%E9%80%82%E9%85%8D%E7%9B%B8%E5%85%B3%E4%BB%A3%E7%A0%81" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>移动端屏幕适配相关代码</h1>
+
+<pre><code>&lt;meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" /&gt;
+&lt;meta name="format-detection" content="telephone=no"&gt;
+</code></pre>
+
+<h1>
+<a id="js执行屏幕rem计算" class="anchor" href="#js%E6%89%A7%E8%A1%8C%E5%B1%8F%E5%B9%95rem%E8%AE%A1%E7%AE%97" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>JS执行屏幕rem计算</h1>
+
+<pre><code>htmlFontSize();/**开始进入界面执行方法***/
+window.onresize = function() {
+    htmlFontSize();/**屏幕变化时执行方法***/
+}
+
+function htmlFontSize() {
+    var w = document.documentElement.clientWidth;
+    var i = parseInt(w) / 768;
+    document.documentElement.style.fontSize = (parseInt(w) / 768) * 40 + "px";
+}
 </code></pre>
 
       <footer class="site-footer">
